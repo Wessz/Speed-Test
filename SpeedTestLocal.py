@@ -1,6 +1,6 @@
 import speedtest
 
-speed = speedtest.Speetest()
+speed = speedtest.Speedtest()
 
 def bytes_to_mb (bytes):
     KB = 1024
@@ -8,7 +8,7 @@ def bytes_to_mb (bytes):
     return int (bytes/MB)
 
 speed_download = speed.download()
-speed_upload = speed.speed_upload()
+speed_upload = speed.upload()
 server = speed.get_best_server()
 ip_address = server['host'].split(':')[0]
 
